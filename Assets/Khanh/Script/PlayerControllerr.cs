@@ -9,7 +9,14 @@ public class PlayerControllerr : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private bool isDead = false;
+    //private bool isGrounded = false;
+
+    [Header("Ground Check")]
+    public Transform groundCheck;             // Điểm kiểm tra dưới chân
+    public float groundCheckRadius = 0.1f;    // Bán kính kiểm tra
+    public LayerMask groundLayer;             // Layer mặt đất
     private bool isGrounded = false;
+
     private bool isControlInverted = false;
 
     [Header("Movement Settings")]
@@ -53,6 +60,8 @@ public class PlayerControllerr : MonoBehaviour
             transform.localScale = new Vector3(-4, 5, 1); // Quay mặt trái
         }
         UpdateAnimation();
+         // Kiểm tra chạm đất (chỉ true nếu đứng trên mặt đất)
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
     }
 
@@ -85,9 +94,18 @@ public class PlayerControllerr : MonoBehaviour
             Die();
         }
 
+        // if (collision.gameObject.CompareTag("Ground"))
+        // {
+        //     isGrounded = true;
+        // }
+        // Mặt đất hiện ra nếu cần
         if (collision.gameObject.CompareTag("Ground"))
         {
-            isGrounded = true;
+            SpriteRenderer sr = collision.gameObject.GetComponent<SpriteRenderer>();
+            if (sr != null)
+            {
+                sr.enabled = true;
+            }
         }
     }
 
@@ -109,6 +127,7 @@ public class PlayerControllerr : MonoBehaviour
             SetControlInverted(false);
             Debug.Log("Controls Reset!");
         }
+        
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -149,4 +168,4 @@ public class PlayerControllerr : MonoBehaviour
         animator.SetBool("IsRunning", isRunning);
         animator.SetBool("IsJumping",isJumping);
     }
-}
+} 
