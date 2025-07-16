@@ -44,6 +44,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BackGround
+    uniqueID: 3254950565
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
@@ -52,6 +55,12 @@ TagManager:
     locked: 0
   - name: Ground
     uniqueID: 4290934063
+    locked: 0
+  - name: GroundTrap
+    uniqueID: 3369342513
+    locked: 0
+  - name: Trap
+    uniqueID: 44228867
     locked: 0
   m_RenderingLayers:
   - Default
