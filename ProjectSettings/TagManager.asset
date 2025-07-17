@@ -10,6 +10,7 @@ TagManager:
   - ResetZone
   - FakePlatform
   - FallingWall
+  - Goal
   layers:
   - Default
   - TransparentFX
@@ -52,6 +53,9 @@ TagManager:
     locked: 0
   - name: Ground
     uniqueID: 4290934063
+    locked: 0
+  - name: Trap
+    uniqueID: 461991505
     locked: 0
   m_RenderingLayers:
   - Default
