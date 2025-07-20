@@ -10,6 +10,8 @@ TagManager:
   - ResetZone
   - FakePlatform
   - FallingWall
+  - TelePort
+  - Audio
   layers:
   - Default
   - TransparentFX
@@ -47,6 +49,12 @@ TagManager:
   - name: BackGround
     uniqueID: 3254950565
     locked: 0
+  - name: Teleport
+    uniqueID: 1617788181
+    locked: 0
+  - name: TrapMove
+    uniqueID: 3770696735
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
@@ -61,6 +69,9 @@ TagManager:
     locked: 0
   - name: Trap
     uniqueID: 44228867
+    locked: 0
+  - name: ForeGround
+    uniqueID: 3613080825
     locked: 0
   m_RenderingLayers:
   - Default

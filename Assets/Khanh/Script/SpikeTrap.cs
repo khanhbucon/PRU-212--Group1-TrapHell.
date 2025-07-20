@@ -6,6 +6,11 @@ public class SpikeTrap : MonoBehaviour
 {
     public List<GameObject> spikeObjects; // Các object chông (Spike1, Spike2)
     private bool activated = false;
+    private AudioManager audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     void Start()
     {
@@ -25,6 +30,7 @@ public class SpikeTrap : MonoBehaviour
         if (!activated && other.CompareTag("Player"))
         {
             activated = true;
+            audioManager.PlaySFX(audioManager.dieClip, 0.1f);
 
             foreach (var spike in spikeObjects)
             {

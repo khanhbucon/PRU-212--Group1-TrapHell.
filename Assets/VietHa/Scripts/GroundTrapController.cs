@@ -3,7 +3,7 @@ using UnityEngine.Tilemaps;
 
 public class GroundTrapController : MonoBehaviour
 {
-    public enum GroundTrapType { Disappear, MoveLeft, MoveRight, MoveUp, None }
+    public enum GroundTrapType { Disappear, MoveLeft, MoveRight, MoveUp,MoveDown, None }
     public GroundTrapType trapType = GroundTrapType.None;
 
     public float trapSpeed = 5f;
@@ -57,6 +57,11 @@ public class GroundTrapController : MonoBehaviour
             case GroundTrapType.MoveUp:
                 rb.bodyType = RigidbodyType2D.Kinematic;
                 rb.linearVelocity = Vector2.up * trapSpeed;
+                break;
+
+            case GroundTrapType.MoveDown:
+                rb.bodyType = RigidbodyType2D.Kinematic;
+                rb.linearVelocity = Vector2.down * trapSpeed;
                 break;
 
             case GroundTrapType.None:
