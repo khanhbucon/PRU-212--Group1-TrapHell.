@@ -6,6 +6,7 @@ public class Goal : MonoBehaviour
 {
     public GameObject winPanel;
     public TMP_Text finalScoreText;
+    public AudioSource backgroundMusic; // 👈 Thêm tham chiếu tới AudioSource
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -17,6 +18,9 @@ public class Goal : MonoBehaviour
             if (finalScoreText != null)
                 finalScoreText.text = "Total Deaths: " + GameManager.Instance.deathCount;
 
+            if (backgroundMusic != null && backgroundMusic.isPlaying)
+                backgroundMusic.Stop(); // 👈 Dừng nhạc khi thắng
+
             Time.timeScale = 0f;
         }
     }
@@ -24,8 +28,7 @@ public class Goal : MonoBehaviour
     public void NextLevel()
     {
         Time.timeScale = 1f;
-        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
-        SceneManager.LoadScene(nextSceneIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void Retry()

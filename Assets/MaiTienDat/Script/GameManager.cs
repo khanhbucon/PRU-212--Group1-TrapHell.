@@ -1,5 +1,5 @@
 using UnityEngine;
-using TMPro; // 👉 Thêm thư viện TextMeshPro
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -7,9 +7,13 @@ public class GameManager : MonoBehaviour
 
     public int deathCount = 0;
 
-    public TMP_Text scoreText;        // ✅ TMP_Text thay cho Text
+    public TMP_Text scoreText;
     public GameObject winPanel;
-    public TMP_Text finalScoreText;   // ✅ TMP_Text thay cho Text
+    public TMP_Text finalScoreText;
+
+    [Header("Audio")]
+    public AudioClip deathSound;          // 👈 Âm thanh mỗi khi chết
+    private AudioSource audioSource;
 
     private void Awake()
     {
@@ -22,6 +26,8 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        audioSource = GetComponent<AudioSource>(); // 👈 Lấy AudioSource
     }
 
     private void OnEnable()
@@ -37,9 +43,16 @@ public class GameManager : MonoBehaviour
     public void AddDeath()
     {
         deathCount++;
+
         if (scoreText != null)
         {
             scoreText.text = "Deaths: " + deathCount;
+        }
+
+        // 👇 Phát âm thanh chết
+        if (deathSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(deathSound);
         }
     }
 
