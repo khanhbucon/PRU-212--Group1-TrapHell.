@@ -22,7 +22,7 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     public void ReloadCurrentScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
     }
 
 

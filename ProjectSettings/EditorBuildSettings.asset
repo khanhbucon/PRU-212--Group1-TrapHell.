@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/VietHa/Scene/MainMenu.unity
+    guid: 7963ceb3d341aaa45a0cb3a2e8ca5f80
+  - enabled: 1
     path: Assets/VietHa/Scene/Level 2 - Ha.unity
     guid: 9c587979e3e9c41469daa0bd20ba939f
   - enabled: 1
