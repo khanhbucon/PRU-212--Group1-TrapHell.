@@ -14,6 +14,7 @@ public class DieZone : MonoBehaviour
             if (player != null)
             {
                 player.Die(); // giả sử bạn có hàm Die trong PlayerController
+                
             }
             else
             {

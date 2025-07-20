@@ -129,7 +129,9 @@ public class PlayerControllerr : MonoBehaviour
             transform.position = checkpointPosition;
             rb.linearVelocity = Vector2.zero;
             isDead = false;
+            
         }
+        LevelManager.Instance.ReloadCurrentScene(); // Reload the current scene
     }
 
     public void SetCheckpoint(Vector2 newCheckpoint)
