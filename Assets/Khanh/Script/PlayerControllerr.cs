@@ -160,9 +160,9 @@ public class PlayerControllerr : MonoBehaviour
     //    bool isRunning = Math.Abs(rb.linearVelocity.x) > 0.1f;
     //    bool isJumping = !isGrounded;
     //    animator.SetBool("IsRunning", isRunning);
-    //    animator.SetBool("IsJumping", isJumping);
+    //    animator.SetBool("IsJumping",isJumping);
     //}
-
+    
     public GameObject mainMenuButtonUI;
     private Vector3 deathPosition; // Vị trí người chơi chết
     public static int deathCount = 0;
