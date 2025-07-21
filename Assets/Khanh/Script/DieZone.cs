@@ -10,7 +10,7 @@ public class DieZone : MonoBehaviour
             Debug.Log("Player đã chạm vào DieZone!");
 
             // Gọi hàm chết từ Player (nếu có)
-            PlayerControllerr player = collision.GetComponent<PlayerControllerr>();
+            PlayerControllerKhanh player = collision.GetComponent<PlayerControllerKhanh>();
             if (player != null)
             {
                 player.Die(); // giả sử bạn có hàm Die trong PlayerController

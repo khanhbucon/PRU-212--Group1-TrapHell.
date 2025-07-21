@@ -30,7 +30,7 @@ public class SawBladeMover : MonoBehaviour
             Debug.Log("Player hit by sawblade!");
 
             // Gọi method Die() từ script PlayerController nếu có
-            PlayerControllerr player = collision.GetComponent<PlayerControllerr>();
+            PlayerControllerKhanh  player = collision.GetComponent<PlayerControllerKhanh>();
             if (player != null)
             {
                 player.Die();
