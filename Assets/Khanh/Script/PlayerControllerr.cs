@@ -203,7 +203,7 @@ public class PlayerControllerr : MonoBehaviour
 
     void Start()
     {
-        countDeathText.text = "Death Count: " + deathCount;
+        countDeathText.text = "Number of death: " + deathCount;
     }
 
     void Update()
@@ -283,7 +283,7 @@ public class PlayerControllerr : MonoBehaviour
 
         isDead = true;
         deathCount++;
-        countDeathText.text = "Count: " + deathCount;
+        countDeathText.text = "Number of death: " + deathCount;
         AudioManager.Instance.PlayDie();
 
 

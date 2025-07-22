@@ -16882,6 +16882,23 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2118315678}
   m_SourcePrefab: {fileID: 100100000, guid: 3a66cd4b5bb546b41a6351f394d3fda2, type: 3}
+--- !u!1 &1567687470 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3606549836325478433, guid: 51f6b53ec101c024bbf74959e5b727a6, type: 3}
+  m_PrefabInstance: {fileID: 7959618243042677246}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1567687472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567687470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f228dd1e0ce45d54a82b8982c4d2d336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1582869429
 GameObject:
   m_ObjectHideFlags: 0
@@ -35690,17 +35707,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3761301836001645017, guid: 93f12a0ee296c57438efebde3ca4939d, type: 3}
   m_PrefabInstance: {fileID: 8447392205481074231}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1680648311 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4259826851130733529, guid: 51f6b53ec101c024bbf74959e5b727a6, type: 3}
-  m_PrefabInstance: {fileID: 7959618243042677246}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f228dd1e0ce45d54a82b8982c4d2d336, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1682480299
 GameObject:
   m_ObjectHideFlags: 0
@@ -50736,7 +50742,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3606549836325478433, guid: 51f6b53ec101c024bbf74959e5b727a6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1567687472}
   m_SourcePrefab: {fileID: 100100000, guid: 51f6b53ec101c024bbf74959e5b727a6, type: 3}
 --- !u!1001 &8447392205481074231
 PrefabInstance:
@@ -50829,7 +50838,11 @@ PrefabInstance:
     - target: {fileID: 5523295335343652420, guid: 93f12a0ee296c57438efebde3ca4939d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1680648311}
+      objectReference: {fileID: 1567687472}
+    - target: {fileID: 5523295335343652420, guid: 93f12a0ee296c57438efebde3ca4939d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadScence
+      objectReference: {fileID: 0}
     - target: {fileID: 7185854814263313917, guid: 93f12a0ee296c57438efebde3ca4939d, type: 3}
       propertyPath: m_Name
       value: Canvas

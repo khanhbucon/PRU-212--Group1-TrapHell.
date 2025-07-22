@@ -1,16 +1,23 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+
 public class MainMenu : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-   public void LoadSence()
+    public void LoadSence()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Level 2 - Ha");
     }
+
     public void Exit()
     {
-        Application.Quit();
+#if UNITY_EDITOR
+        // Trong Editor, dừng play mode
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+            // Trong build game, quit thật
+            Application.Quit();
+#endif
     }
 
     public void LoadScence()

@@ -1259,6 +1259,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f228dd1e0ce45d54a82b8982c4d2d336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level1SceneName: Level 1 - Dung
+  level2SceneName: Level 2 - Ha
+  mainMenuSceneName: MainMenu
 --- !u!4 &1808030057
 Transform:
   m_ObjectHideFlags: 0
