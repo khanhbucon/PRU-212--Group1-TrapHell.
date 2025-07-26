@@ -29,7 +29,7 @@ public class SpikeTrap : MonoBehaviour
         if (!activated && other.CompareTag("Player"))
         {
             activated = true;
-            audioManager.PlaySFX(audioManager.teleClip, 0.1f);
+
             foreach (var spike in spikeObjects)
             {
                 spike.GetComponent<SpriteRenderer>().enabled = true;
